@@ -1,38 +1,58 @@
-.App {
+.container{
+  margin: auto;
+  max-width: 600px;
+}
+.heading{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo{
+  display: grid;
+  grid-template-columns: .25fr 2fr .25fr;
+  background: rgba(218, 212, 212, 0.863);
+  margin: 5px 0px;
+}
+.todo div{
+  padding: 10px;
+  text-transform: capitalize;
+}
+.todo div:first-child{
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+}
+
+
+.pagination-container{
+  /* margin: auto; */
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding:10px;
+  border-radius: 10px;
+  width: 100%;
+  background: rgb(155, 155, 234);
+}
+.pagination-container button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  margin: 0px 5px;
+
+}
+#prev-btn, #next-btn{
+  width: 50px;
+  /* height: 40px; */
+}
+.active-page{
+  background: blue;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination-container button:hover{
+  background: rgba(0, 0, 255, 0.529);
+  color: white;
 }
